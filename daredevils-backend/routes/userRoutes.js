@@ -1,4 +1,3 @@
-// src/routes/userRoutes.js
 const router = require('express').Router();
 const ctrl   = require('../controllers/userController');
 

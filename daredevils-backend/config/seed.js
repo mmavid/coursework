@@ -1,4 +1,3 @@
-// src/config/seed.js
 const {
   sequelize, User, Car, Service, Vacancy,
   CallRequest, TestDriveRequest, CreditRequest,

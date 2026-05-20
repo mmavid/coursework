@@ -1,4 +1,3 @@
-// src/models/PartnershipRequest.js
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
@@ -10,7 +9,7 @@ const PartnershipRequest = sequelize.define('PartnershipRequest', {
   phone:        { type: DataTypes.STRING },
   website:      { type: DataTypes.STRING },
   type:         { type: DataTypes.ENUM('supplier','service_partner','insurance','bank','media','other'), defaultValue: 'other' },
-  description:  { type: DataTypes.TEXT },                        // предложение о сотрудничестве
+  description:  { type: DataTypes.TEXT },                        
   status:       { type: DataTypes.ENUM('new','reviewing','negotiation','approved','rejected'), defaultValue: 'new' },
   managerNote:  { type: DataTypes.TEXT },
 }, { tableName: 'partnership_requests', timestamps: true });

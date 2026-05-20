@@ -1,9 +1,3 @@
-// src/controllers/requestController.js
-/**
- * Фабрика CRUD-контроллеров для всех таблиц-заявок.
- * Каждая заявка имеет: getAll (с фильтром status), getById, create, updateStatus, remove.
- */
-
 const { Op } = require('sequelize');
 
 const makeController = (Model, includes = []) => ({

@@ -1,11 +1,10 @@
-// src/models/Vacancy.js
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
 const Vacancy = sequelize.define('Vacancy', {
   id:           { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
   title:        { type: DataTypes.STRING, allowNull: false },
-  department:   { type: DataTypes.STRING },                      // Отдел продаж, Сервис, IT...
+  department:   { type: DataTypes.STRING },                     
   description:  { type: DataTypes.TEXT },
   requirements: { type: DataTypes.TEXT },
   salaryFrom:   { type: DataTypes.INTEGER },

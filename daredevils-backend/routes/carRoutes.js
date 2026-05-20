@@ -1,4 +1,3 @@
-// src/routes/carRoutes.js
 const router = require('express').Router();
 const ctrl   = require('../controllers/carController');
 

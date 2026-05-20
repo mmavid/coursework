@@ -1,4 +1,3 @@
-// src/controllers/carController.js
 const { Car } = require('../models');
 const { Op }  = require('sequelize');
 

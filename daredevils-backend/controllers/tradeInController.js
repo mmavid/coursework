@@ -1,18 +1,14 @@
-// src/controllers/tradeInController.js
 const makeController = require('./requestController');
 const { TradeInRequest, Car } = require('../models');
 
-// Базовые CRUD от фабрики
 const base = makeController(TradeInRequest, [
   { model: Car, as: 'targetCar', attributes: ['id','brand','model','year','price'] },
 ]);
 
-// Переопределяем create — можно добавить авто-оценку
 base.create = async (req, res) => {
   try {
     const data = { ...req.body };
 
-    // Авто-оценка: грубая формула (в реальном проекте — API CARFAX / автоstat)
     if (data.clientYear && data.clientMileage !== undefined) {
       const age      = new Date().getFullYear() - +data.clientYear;
       const base_val = 1_500_000;

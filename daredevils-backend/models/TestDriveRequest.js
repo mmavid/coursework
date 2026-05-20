@@ -1,4 +1,3 @@
-// src/models/TestDriveRequest.js
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
